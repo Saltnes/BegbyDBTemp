@@ -18,6 +18,7 @@ textarea {
     max-width: 280px;
 }
 
+
 .table {
     border-collapse: collapse;
     width: 100%;
@@ -46,8 +47,14 @@ textarea {
     padding-bottom: 12px;
     text-align: left;
     background-color: #333;
-    color: white;
+    color: #eeeeee;
     font-family: "Segoe UI Bold", sans-serif;
+    text-transform: uppercase;
+}
+
+.sbutton {
+    font-family: "Segoe UI Semibold", sans-serif;
+
 }
 
 /* Responsive: Portrait tablets and up */

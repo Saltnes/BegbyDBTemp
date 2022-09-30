@@ -19,37 +19,12 @@ namespace BegbyDBTemp
 
         protected void ButtonGetByName_Click(object sender, EventArgs e)
         {
-            GridView1.DataSource = GetByName(TextBoxSearch.Text);
+            DBLayer dbl = new DBLayer();
+            GridView1.DataSource = dbl.GetByName(TextBoxSearch.Text);
             GridView1.DataBind();
         }
 
-        private DataTable GetByName(string name)
-        {
-            SqlParameter param;
-            var connectionString = ConfigurationManager.ConnectionStrings["ConnAir"].ConnectionString;
-            DataTable dt = new DataTable();
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.People WHERE first_name=@name", conn);
-                cmd.CommandType = CommandType.Text;
-
-                param = new SqlParameter("@name", SqlDbType.NVarChar);
-                param.Value = name;
-                cmd.Parameters.Add(param);
-
-
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                dt.Load(reader);
-
-                reader.Close();
-                conn.Close();
-            }
-
-            return dt;
-        }
+       
 
 
         private void BindGrid()

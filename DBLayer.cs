@@ -6,7 +6,7 @@ namespace BegbyDBTemp
 {
     public class DBLayer
     {
-        public DataTable GetTeacherByName(string name)
+        public DataTable GetByName(string name)
         {
             SqlParameter param;
             var connectionString = ConfigurationManager.ConnectionStrings["ConnAir"].ConnectionString;
