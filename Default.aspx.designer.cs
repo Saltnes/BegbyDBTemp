@@ -15,6 +15,15 @@ namespace BegbyDBTemp
     {
 
         /// <summary>
+        /// ButtonGeyByName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonGeyByName;
+
+        /// <summary>
         /// TextBoxSearch control.
         /// </summary>
         /// <remarks>
@@ -24,15 +33,6 @@ namespace BegbyDBTemp
         protected global::System.Web.UI.WebControls.TextBox TextBoxSearch;
 
         /// <summary>
-        /// ButtonGetByName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonGetByName;
-
-        /// <summary>
         /// GridView1 control.
         /// </summary>
         /// <remarks>
@@ -40,19 +40,5 @@ namespace BegbyDBTemp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView1;
-
-        /// <summary>
-        /// Master property.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated property.
-        /// </remarks>
-        public new BegbyDBTemp.SiteMaster Master
-        {
-            get
-            {
-                return ((BegbyDBTemp.SiteMaster)(base.Master));
-            }
-        }
     }
 }

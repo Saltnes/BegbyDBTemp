@@ -7,8 +7,8 @@
     </div>
 
     <div class="row">
+        <asp:Button ID="ButtonGeyByName" runat="server" Text="Button" OnClick="ButtonGetByName_Click"/>
         <asp:TextBox ID="TextBoxSearch" runat="server"></asp:TextBox>
-        <asp:Button ID="ButtonGetByName" runat="server" Text="Button"/>
         <br/>
         <br/>
         <asp:GridView class="table" ID="GridView1" runat="server"></asp:GridView>

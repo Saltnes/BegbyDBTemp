@@ -25,6 +25,7 @@ namespace BegbyDBTemp
 
         private DataTable GetByName(string name)
         {
+            SqlParameter param;
             var connectionString = ConfigurationManager.ConnectionStrings["ConnAir"].ConnectionString;
             DataTable dt = new DataTable();
 
@@ -34,9 +35,9 @@ namespace BegbyDBTemp
                 SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.People WHERE first_name=@name", conn);
                 cmd.CommandType = CommandType.Text;
 
-                // param = new SqlParameter("@name", SqlDbType.NVarChar);
-                // param.Value = name;
-                // cmd.Parameters.Add(param);
+                param = new SqlParameter("@name", SqlDbType.NVarChar);
+                param.Value = name;
+                cmd.Parameters.Add(param);
 
 
                 SqlDataReader reader = cmd.ExecuteReader();
